@@ -1,38 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 快速使用 Create Next App
 
-## Getting Started
+这是一个基于 `Next.js` 的项目模版，可以快速创建 React 项目
 
-First, run the development server:
+主要功能：
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- 支持 TypeScript
+- 基于 `Next.js` 支持 SSR
+- 包管理器替换为 `pnpm`
+- 添加了 `husky` `lint-staged` 以 commit 时检查
+- 保存时会自动格式化
+
+## 准备工作
+
+1. 需要全局安装 `pnpm`
+
+```sh
+$ npm install pnpm -g
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 点击 GitHub 的 **Use this template**，基于此模版创建一个新的项目，并将你的项目 `clone` 到本地。或者运行：
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```sh
+$ npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/crazyurus/create-next-app"
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. 运行 `pnpm install` 安装依赖
+4. 运行 `pnpm run start` 启动项目。在 VSCode 中，也可以通过 **运行和调试** 功能通过界面启动，并在 VSCode 中断点调试
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 可用脚本
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+在这个项目中，你可以使用：
 
-## Learn More
+### `pnpm run start`
 
-To learn more about Next.js, take a look at the following resources:
+使用开发模式运行你的项目，可打开 [http://localhost:3000](http://localhost:3000) 在浏览器中查看。当文件修改时页面会自动更新
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `pnpm run build`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+使用生产模式构建你的项目，产物在 `dist` 目录下，构建时我们会对产物进行优化以拥有更好的性能，构建产物中的文件名均有 hash 值，并对内容进行了压缩。
 
-## Deploy on Vercel
+构建完成后就可以部署了，可以参考 https://facebook.github.io/create-react-app/docs/deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 目录结构
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+项目文件均在 `src` 目录下，需要关注的是：
+
+- 公共组件放在 `components` 下
+- 页面组件放在 `pages` 下
+- 路由遵循 `Next.js` 的约定式路由
+
+## FAQ
+
+TODO
+
+## License
+
+[MIT](./LICENSE)
