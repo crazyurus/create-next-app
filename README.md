@@ -49,10 +49,6 @@ $ npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com
 - 页面组件放在 `pages` 下
 - 路由遵循 `Next.js` 的约定式路由
 
-## FAQ
-
-TODO
-
 ## License
 
 [MIT](./LICENSE)
