@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "husky install",
     "start": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "next": "13.2.4",
@@ -25,6 +26,7 @@
     "eslint-config-prettier": "^8.7.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
+    "next-sitemap": "^4.0.6",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "sass": "^1.59.2",
